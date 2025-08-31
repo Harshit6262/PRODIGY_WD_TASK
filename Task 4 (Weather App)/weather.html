@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div>
+                <h1>Weather App</h1>
+                <div class="tag">Real-time weather by city or your location</div>
+            </div>
+            <button class="toggle" id="unitToggle" title="toggle units" >°C / °F</button>
+        </header>
+
+        <div class="search">
+            <input id="cityInput" type="text" placeholder="Search city (e.g. Kanpur)" aria-label="City name"/>
+            <button id="searchBtn" title="search">Search</button>
+            <button id="geoBtn" title="Use my location">Use Location</button>
+        </div>
+
+        <div class="card" id="card" hidden>
+            <div class="row">
+                <section class="current">
+                    <img alt="weather icon" id="icon" class="icon"/>
+                    <div class="city-time">
+                        <div id="city" class="city">-</div>
+                        <div id="time" class="time">-</div>
+                        <div id="cond" class="cond">-</div>
+                    </div>
+                    <div id="temp" class="temp">-</div>
+                </section>
+                <section class="stats">
+                    <div class="stat">
+                        <div class="label">Feels Like</div>
+                        <div id="feels" class="value">-</div>
+                    </div>
+                    <div class="stat">
+                        <div class="label">Humidity</div>
+                        <div id="humidity" class="value">-</div>
+                    </div>
+                    <div class="stat">
+                        <div class="label">Wind</div>
+                        <div id="wind" class="value">-</div>
+                    </div>
+                </section>
+            </div>
+
+          <div id="msg" class="message"></div>
+
+        </div>
+
+      <div id="status" class="message"></div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
